@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    button {
+      padding: 10px;
+      margin-right: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.reset {
+      background-color: #f44336;
+    }
+  </style>
+  <title>My Webpage</title>
+</head>
+<body>
+
+  <h1>Introduction</h1>
+
+  <!-- Photo -->
+  <img src="personal photo.jpg" alt="Your Photo">
+
+  <form id="myForm">
+
+    <!-- Table 1 -->
+    <table>
+      <tr>
+        <th colspan="3">Personal Information</th>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <img src="personal photo.jpg" alt="Personal Photo">
+          <br>
+          <em>Personal Photo</em>
+        </td>
+        <td>Name:</td>
+        <td>Your Name</td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Other"> Other
+        </td>
+      </tr>
+      <tr>
+        <td>County:</td>
+        <td>
+          <select>
+            <option value="Taipei">Taipei</option>
+            <option value="Tainan">Tainan</option>
+            <option value="Taichung">Taichung</option>
+            <option value="Taoyuan">Taoyuan</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Table 2 -->
+    <table>
+      <tr>
+        <th>Hobbies</th>
+        <th>Skills</th>
+      </tr>
+      <tr>
+        <td>Swimming <input type="checkbox"> Volleyball <input type="checkbox"> Movie <input type="checkbox"> Game <input type="checkbox"> Sleep <input type="checkbox"></td>
+        <td>Java <input type="checkbox"> HTML <input type="checkbox"> Python <input type="checkbox"> Microsoft Office <input type="checkbox"> Premiere <input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Say something:</td>
+        <td><textarea placeholder="Say something here."></textarea></td>
+      </tr>
+    </table>
+
+    <!-- Submit and Reset Buttons -->
+    <button type="button" onclick="submitForm()">Submit</button>
+    <button type="button" class="reset" onclick="resetForm()">Reset</button>
+
+  </form>
+
+  <script>
+    function submitForm() {
+      // Add your submission logic here
+      alert("Form submitted!");
+    }
+
+    function resetForm() {
+      document.getElementById("myForm").reset();
+    }
+  </script>
+
+</body>
+</html>
